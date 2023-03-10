@@ -1,6 +1,6 @@
 /* root rules */
 :root {
-  font-size: 10px;
+  font-size: 8.2px;
 }
 
 /* base rules */
@@ -10,9 +10,7 @@ body {
   font-size: 1.6rem;
 }
 
-*,
-*:before,
-*:after {
+* {
   box-sizing: border-box;
 }
 
@@ -32,6 +30,7 @@ body {
 }
 
 .accordion__top {
+  margin-top: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,13 +69,8 @@ body {
 
 /* cross style */
 .cross {
-  display: none;
   width: 1.4rem;
   height: 1.4rem;
-}
-
-.accordion:hover .cross {
-  display: block;
 }
 
 .cross__item-1,
@@ -96,34 +90,88 @@ body {
   rotate: 0deg;
 }
 
-.accordion:hover,
+.accordion__item:active {
+  opacity: 0.6;
+}
+
+.accordion__item:active .cross {
+  display: block;
+}
+
 .accordion__input:checked ~ .accordion__content {
   color: teal;
 }
-.accordion:hover .cross__item-1,
-.accordion:hover .cross__item-2 {
-  background-color: teal;
-}
 
-.accordion__input:checked ~ .accordion__content .accordion__image,
-.accordion__input:hover ~ .accordion__content .accordion__image {
+.accordion__input:checked ~ .accordion__content .accordion__image {
   height: 20rem;
 }
 
-.accordion__input:checked ~ .accordion__content .accordion__image img,
-.accordion__input:hover ~ .accordion__content .accordion__image img {
+.accordion__input:checked ~ .accordion__content .accordion__image img {
   scale: 1;
   opacity: 1;
   visibility: visible;
 }
 
-.accordion__input:checked ~ .accordion__content .cross__item-1,
-.accordion__input:hover ~ .accordion__content .cross__item-1,
-.cross:hover .cross__item-1 {
+.accordion__input:checked ~ .accordion__content .cross__item-1 {
   rotate: 45deg;
+  background-color: teal;
 }
-.accordion__input:checked ~ .accordion__content .cross__item-2,
-.accordion__input:hover ~ .accordion__content .cross__item-2,
-.cross:hover .cross__item-2 {
+.accordion__input:checked ~ .accordion__content .cross__item-2 {
   rotate: -45deg;
+  background-color: teal;
+}
+
+@media (hover: hover) {
+  .cross {
+    display: none;
+  }
+
+  .accordion:hover {
+    color: teal;
+  }
+
+  .accordion:hover .cross {
+    display: block;
+  }
+
+  .accordion:hover .cross__item-1,
+  .accordion:hover .cross__item-2 {
+    background-color: teal;
+  }
+
+  .accordion__input:hover ~ .accordion__content .accordion__image {
+    height: 20rem;
+  }
+
+  .accordion__input:hover ~ .accordion__content .accordion__image img {
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .accordion__input:hover ~ .accordion__content .cross__item-1 {
+    rotate: 45deg;
+  }
+
+  .accordion__input:hover ~ .accordion__content .cross__item-2 {
+    rotate: -45deg;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    font-size: 7px;
+  }
+}
+
+@media (min-width: 400px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 820px) {
+  :root {
+    font-size: 17px;
+  }
 }
