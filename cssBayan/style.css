@@ -1,0 +1,93 @@
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.accordion {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.accordion__item {
+  position: relative;
+  border-top: 1px solid #000;
+  cursor: pointer;
+}
+
+.accordion__title {
+  display: block;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.accordion__title:hover,
+.accordion__input:checked ~ .accordion__title {
+  color: teal;
+}
+
+.accordion__input {
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.accordion__input:checked ~ .accordion__content,
+.accordion__input:hover ~ .accordion__content {
+  scale: 1;
+  height: max-content;
+}
+
+.accordion__content {
+  height: 0;
+  scale: 0;
+  transition: all 0.5s ease;
+}
+
+.text {
+}
+
+.cross {
+  position: absolute;
+  right: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.cross::after,
+.cross::before {
+  top: 0.5rem;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1.4rem;
+  border-radius: 30%;
+  height: 0.4rem;
+  background-color: black;
+  transition: all 0.1s ease;
+}
+
+.cross::after {
+  rotate: 90deg;
+}
+.cross::before {
+  rotate: 0deg;
+}
+
+.cross:hover::after {
+  rotate: 45deg;
+}
+
+.cross:hover::before {
+  rotate: -45deg;
+}
