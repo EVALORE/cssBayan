@@ -125,6 +125,10 @@ h1 {
   background-color: teal;
 }
 
+.accordion__item:active .accordion__input:not(:checked) ~ .accordion__content{
+  color: black;
+}
+
 @media (hover: hover) {
   .cross {
     display: none;
@@ -161,6 +165,12 @@ h1 {
     rotate: -45deg;
   }
 }
+
+  .accordion__item:active .cross__item-1,
+  .accordion__item:active .cross__item-2 {
+    background-color: black;
+  }
+
 
 @media (max-width: 320px) {
   :root {
