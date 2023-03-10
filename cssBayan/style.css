@@ -24,7 +24,7 @@ body {
 
 /* item */
 .accordion__item {
-  border-top: 1px solid #000;
+  border-top: 0.2rem solid #000;
 }
 
 .accordion__content {
@@ -52,7 +52,7 @@ body {
 /* image */
 .accordion__image {
   height: 0rem;
-  margin-top: 1rem;
+  margin-block: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,15 +63,20 @@ body {
 .accordion__image > img {
   transition: all 0.1s ease-in-out;
   scale: 0;
-  margin: 0px auto;
+  margin: 0 auto;
   display: block;
   height: 20rem;
 }
 
 /* cross style */
 .cross {
+  display: none;
   width: 1.4rem;
   height: 1.4rem;
+}
+
+.accordion:hover .cross {
+  display: block;
 }
 
 .cross__item-1,
@@ -85,15 +90,19 @@ body {
 }
 .cross__item-1 {
   rotate: 90deg;
-  translate: 0 4px;
+  translate: 0 0.4rem;
 }
 .cross__item-2 {
   rotate: 0deg;
 }
 
-.accordion__content:hover,
+.accordion:hover,
 .accordion__input:checked ~ .accordion__content {
   color: teal;
+}
+.accordion:hover .cross__item-1,
+.accordion:hover .cross__item-2 {
+  background-color: teal;
 }
 
 .accordion__input:checked ~ .accordion__content .accordion__image,
@@ -112,11 +121,9 @@ body {
 .accordion__input:hover ~ .accordion__content .cross__item-1,
 .cross:hover .cross__item-1 {
   rotate: 45deg;
-  background-color: teal;
 }
 .accordion__input:checked ~ .accordion__content .cross__item-2,
 .accordion__input:hover ~ .accordion__content .cross__item-2,
 .cross:hover .cross__item-2 {
   rotate: -45deg;
-  background-color: teal;
 }
