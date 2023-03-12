@@ -1,6 +1,6 @@
 /* root rules */
 :root {
-  font-size: 51%;
+  font-size: 110%;
 }
 
 /* base rules */
@@ -172,20 +172,20 @@ h1 {
   background-color: black;
 }
 
-@media (max-width: 320px) {
-  :root {
-    font-size: 43%;
-  }
-}
-
-@media (min-width: 400px) {
+@media (max-width: 820px) {
   :root {
     font-size: 62.5%;
   }
 }
 
-@media (min-width: 820px) {
+@media (max-width: 400px) {
   :root {
-    font-size: 110%;
+    font-size: 51%;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    font-size: 43%;
   }
 }
