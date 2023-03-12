@@ -1,6 +1,6 @@
 /* root rules */
 :root {
-  font-size: 8.2px;
+  font-size: 51%;
 }
 
 /* base rules */
@@ -12,10 +12,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-h1 {
-  text-align: center;
 }
 
 /* accordion */
@@ -31,6 +27,7 @@ h1 {
 
 .accordion__content {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .accordion__top {
@@ -46,6 +43,7 @@ h1 {
 
 /* input */
 .accordion__input {
+  -webkit-tap-highlight-color: transparent;
   width: 0;
   height: 0;
   appearance: none;
@@ -125,7 +123,7 @@ h1 {
   background-color: teal;
 }
 
-.accordion__item:active .accordion__input:not(:checked) ~ .accordion__content{
+.accordion__item:active .accordion__input:not(:checked) ~ .accordion__content {
   color: black;
 }
 
@@ -166,26 +164,25 @@ h1 {
   }
 }
 
-  .accordion__item:active .cross__item-1,
-  .accordion__item:active .cross__item-2 {
-    background-color: black;
-  }
-
+.accordion__item:active .cross__item-1,
+.accordion__item:active .cross__item-2 {
+  background-color: black;
+}
 
 @media (max-width: 320px) {
   :root {
-    font-size: 7px;
+    font-size: 43%;
   }
 }
 
 @media (min-width: 400px) {
   :root {
-    font-size: 10px;
+    font-size: 62.5%;
   }
 }
 
 @media (min-width: 820px) {
   :root {
-    font-size: 17px;
+    font-size: 110%;
   }
 }
