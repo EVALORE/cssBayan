@@ -8,10 +8,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-size: 1.6rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 900;
 }
 
 /* accordion */
@@ -27,7 +32,6 @@ body {
 
 .accordion__content {
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .accordion__top {
@@ -43,7 +47,6 @@ body {
 
 /* input */
 .accordion__input {
-  -webkit-tap-highlight-color: transparent;
   width: 0;
   height: 0;
   appearance: none;
@@ -132,7 +135,7 @@ body {
     display: none;
   }
 
-  .accordion:hover {
+  .accordion:hover .accordion__item {
     color: teal;
   }
 
